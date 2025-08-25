@@ -1,41 +1,60 @@
-# Website
+# Online hackathon template
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+A modern template designed for managing hackathon with a mobile-friendly interface & an admin area.
 
-## Installation
+## Showcase
 
-```bash
-yarn
-```
+### 1. Homepage
 
-## Local Development
+A beautifully crafted homepage showcasing the event details and rules for it.
 
-```bash
-yarn start
-```
+### 2. Managing submissions
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+An admin panel to add your hackathon project submissions.
 
-## Build
+### 3. Performance, accessibility and SEO
 
-```bash
-yarn build
-```
+Impressive Lighthouse score to ensure great accessibility for people with disabilities, and SEO optimizations to
+ensure search engines can scan the website with ease.
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## Useful links
 
-## Deployment
+- Homepage: [src/app/page.tsx](./src/app/page.tsx)
+- FAQs: [/src/components/Faq.tsx](./src/components/Faq.tsx)
+- Admin area: [src/app/hacker](./src/app/hacker)
+- Site footer: [/src/components/Footer.tsx](./src/components/Footer.tsx)
+- OG image (preview thumbnail): [og-image.png](public/images/og-image.png)
 
-Using SSH:
+## Technologies
 
-```bash
-USE_SSH=true yarn deploy
-```
+We use [Next.js](https://nextjs.org/), [React](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)
+codebase.
 
-Not using SSH:
+CSS framework [TailwindCSS](https://tailwindcss.com/) is used for all styling needs.
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+## Tips and tricks
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- Never use images with resolution greater than 1080p
+- Before production use, connect to analytics tool such as [Plausible](https://plausible.io/)
+  or [Google Analytics](https://marketingplatform.google.com/about/analytics/)
+
+## Setting up Project
+
+1. Start with setting up your project using [Appwrite CLI](https://appwrite.io/docs/tooling/command-line/installation)
+2. Login using `appwrite login`
+3. Edit [appwrite.json](appwrite.json) and update the project name & ID
+4. Run `appwrite push -all`, this will create all the necessary database, collection and attributes
+
+## Local development
+
+1. Rename [.env.example](.env.example) to `.env` and edit the values
+2. Install dependencies with `npm install` (or `pnpm install` or `yarn`)
+3. Start a development server with `npm run dev` (or `pnpm dev` or `yarn dev`)
+4. Visit [http://localhost:3000](http://localhost:3000/)
+
+## Deploy to production
+
+When used with Appwrite, all changes to `main` branch are automatically deployed to production.
+
+Otherwise, use `npm run build` (or `pnpm build` or `yarn build`), and deploy as Node.js server with build folder as
+`./.next`.
