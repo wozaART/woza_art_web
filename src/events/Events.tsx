@@ -30,7 +30,7 @@ export const EventList: EventItem[] = [
         openingTimes: ['Mon – Fri: 9am – 5.30pm', 'Sat: 9am – 4.30pm', 'Sun: Closed'],
         imgUrl: 'candice-berman-gallery/cbg-inst-oct-3.webp',
         link: '/docs/events/candice-berman-gallery/abstract-and-the-absurb-2025',
-        tags: ['jhb']
+        tags: ['jhb', 'group']
     }, {
         title: 'A Christmas exhibition',
         description: "Group Exhibition by Bronwen Schalkwyk, Elisca du Toit, Kobus Walker, Koos Bronkhorst, Lize Kampman, Magdel van Rooyen, and more …",
@@ -40,6 +40,26 @@ export const EventList: EventItem[] = [
         openingTimes: ['Tuesday – Saturday, 09h00 – 17h00', 'Closed on Sundays and Mondays'],
         imgUrl: 'tina-skukan-gallery/a-christmas-exhibition-2025-web.jpg',
         link: '/docs/events/tina-skukan-gallery/a-christmas-exhibition-2025',
-        tags: ['pta']
+        tags: ['pta', 'group']
+    }, {
+        title: 'Conservation',
+        description: "Solo Ceramic Exhibition by Cornelia Wessels",
+        date: 'November 2, 2025 to October 27, 2025',
+        openingDate: '2025-11-02',
+        year: '2025',
+        openingTimes: ['Tuesday to Thursday (9am - 4pm)', 'Friday to Saturday (9am - 3pm)', 'Sunday(9am - 2pm)', 'Monday(Closed)'],
+        imgUrl: 'jvh-gallery/tvuqezq9n8vyjuhzd5qb.png',
+        link: '/docs/events/jvh-gallery/conversation-cornelia-wessels',
+        tags: ['pta', 'solo']
+    }, {
+        title: 'Beeste',
+        description: "Group Exhibition at Johann van Heerden's Art Gallery",
+        date: 'November 2, 2025 to October 27, 2025',
+        openingDate: '2025-11-02',
+        year: '2025',
+        openingTimes: ['Tuesday to Thursday (9am - 4pm)', 'Friday to Saturday (9am - 3pm)', 'Sunday(9am - 2pm)', 'Monday(Closed)'],
+        imgUrl: 'jvh-gallery/dsbdwtv8d2g7lcme8vau.png',
+        link: '/docs/events/jvh-gallery/beeste-2025',
+        tags: ['pta', 'group']
     },
 ];
