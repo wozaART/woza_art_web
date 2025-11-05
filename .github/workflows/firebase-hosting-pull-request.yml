@@ -20,4 +20,5 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_WOZA_ART_77162 }}
+          channelId: staging
           projectId: woza-art-77162
