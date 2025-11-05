@@ -12,8 +12,17 @@ function Event({ title, description, date, year, openingTimes, imgUrl, link }: E
                     <h3>{title}</h3>
                     <small className='padding-bottom--xs'>{description}</small>
                     <small className='padding-bottom-xs'><b>Date:</b> {date}</small>
-                    <small className='padding-bottom-xs'><b>Year:</b> {year}</small>
-                    <small className='padding-bottom-xs'> <b>Opening Times:</b> {openingTimes}</small>
+                    <small className='padding-bottom-xs'> <b>Opening Times:</b>
+                    </small>
+                    <ul>
+                        {
+                            openingTimes.map((time) => (
+                                <li>
+                                    <small>{time}<br /></small>
+                                </li>
+                            ))
+                        }
+                    </ul>
                     <a href={link}>
                         <small>More info...</small>
                     </a>
