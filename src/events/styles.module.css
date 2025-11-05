@@ -1,0 +1,64 @@
+.features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 33%;
+}
+
+.featureItem {
+    flex-basis: 100%;
+    padding-bottom: 20px;
+}
+
+.featureSvg {
+    height: 200px;
+    width: 200px;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flexContainer small {
+    padding: 6px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-width: 350px;
+}
+
+.imageContainer {
+    padding: 15px;
+    align-self: center;
+    width: auto;
+}
+
+@media (min-width: 650px) {
+    .imageContainer {
+        padding: 15px;
+        align-self: center;
+        height: 250px;
+        min-width: 200px;
+        max-width: 360px;
+        object-fit: cover;
+        overflow: clip;
+    }
+}
+
+.closeupFlexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.closeupFlexContainer div {
+    padding: 10px;
+}

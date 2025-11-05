@@ -1,10 +1,10 @@
 cdebruyn:
   name: Cameron de Bruyn
-  title: Woza Art - Maintainer
+  title: Artist, Cameron de Bruyn
   url: https://camerondebruyn.art
   page:
     # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/cdebruyn-articles'
+    permalink: '/cameron-de-bruyn'
   socials:
     instagram: woza.art
     facebook: wozaart

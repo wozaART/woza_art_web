@@ -1,54 +1,57 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import IdealImage from '@theme/IdealImage';
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  imgUrl: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Overcoming Fear',
+    imgUrl: 'curious_creature.jpg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Society has conditioned us to believe that you can only be an artist if you truly
+        devote your life to art. I choose not to believe in this falacy. I believe art
+        can be a healing force of nature especially if you surround yourself with other
+        expressive individuals.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Get in touch',
+    imgUrl: 'self_portrait_as_teen.jpg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        If you feel there is something you particularly like or would like to set up a commission.
+        You can contact me via <a href="https://wa.me/message/KTBDJDBAAF7HL1">WhatsApp</a> or <a href="https://www.instagram.com/woza.art/">Instagram</a> found on this website and we can setup a session.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Documenting and Preserving',
+    imgUrl: 'the_looking_glass.jpg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Not only is this website a testament to my dedication of the arts and my community.
+        I hope to be able to document what I demonstrate so that I can help others and myself.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, imgUrl, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <IdealImage img={`https://tcaspiuafowfizfjesvj.supabase.co/storage/v1/object/public/artwork-images/${imgUrl}`} />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className="text--center padding--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>

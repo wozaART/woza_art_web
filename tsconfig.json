@@ -4,5 +4,14 @@
   "compilerOptions": {
     "baseUrl": "."
   },
-  "exclude": [".docusaurus", "build"]
+  "mdx": {
+    "plugins": [
+      "remark-frontmatter",
+      "remark-frontmatter-mdx",
+    ]
+  },
+  "exclude": [
+    ".docusaurus",
+    "build"
+  ]
 }
