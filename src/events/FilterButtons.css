@@ -1,0 +1,67 @@
+.filter-buttons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    /* Space between arrows and container */
+    width: 100%;
+    overflow: hidden;
+    /* Hide overflowing content of the wrapper */
+}
+
+.filter-buttons-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    /* Prevent buttons from wrapping to the next line */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE/Edge */
+    flex-grow: 1;
+    /* Allow container to take available space */
+}
+
+.filter-buttons-container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome, Safari, Opera */
+}
+
+.filter-button {
+    flex-shrink: 0;
+    /* Prevent buttons from shrinking */
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    white-space: nowrap;
+    /* Prevent text from wrapping inside buttons */
+}
+
+.filter-button:hover {
+    background-color: #ff1654;
+}
+
+.scroll-arrow {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    /* Prevent arrows from shrinking */
+}
+
+.scroll-arrow:hover {
+    background-color: #ddd;
+}
