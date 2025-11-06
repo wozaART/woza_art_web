@@ -221,8 +221,8 @@ export const EventList: EventItem[] = [
         closingDate: '2026-11-06',
         year: '2025',
         openingTimes: [],
-        imgUrl: 'javett-up/tlhagella_incubation_programme.png',
-        link: '/docs/events/javett-up/tlhagella_incubation_programme',
+        imgUrl: 'javett-up/tlhagella-incubation-programme.png',
+        link: '/docs/events/javett-up/tlhagella-incubation-programme',
         regions: ['pta'],
         tags: ['open-call']
     }
