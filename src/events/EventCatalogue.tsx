@@ -75,8 +75,27 @@ export default function EventCatalogue({ items }): ReactNode {
             const newFilteredTags = filters.filter(tag => tag !== filterId);
             setFilters(newFilteredTags);
         } else {
-            setFilters(tags => [...tags, filterId]);
+            setFilters([...filters, filterId]);
         }
+    }
+
+    function filterCurrentExhibitions(item: EventItem): boolean {
+        const currentDate = new Date();
+        const openingDate = new Date(item.openingDate);
+        const closingDate = new Date(item.closingDate);
+        return openingDate < currentDate && closingDate > currentDate;
+    }
+
+    function filterPastExhibitions(item: EventItem): boolean {
+        const currentDate = new Date();
+        const closingDate = new Date(item.closingDate);
+        return closingDate < currentDate;
+    }
+
+    function filterUpcomingExhibitions(item: EventItem): boolean {
+        const currentDate = new Date();
+        const openingDate = new Date(item.openingDate);
+        return openingDate > currentDate;
     }
 
     const handleFilterSelection = (filterId) => {
@@ -88,23 +107,69 @@ export default function EventCatalogue({ items }): ReactNode {
         const filteredTags = filters.filter(tag => tags.map(i => i.id).includes(tag));
         const filteredRegions = filters.filter(region => regions.map(i => i.id).includes(region));
 
-        const containsTags = filteredTags.every(tag => item.tags.includes(tag));
-        const containsRegions = filteredRegions.every(region => item.regions.includes(region));
+        console.log('filteredTags', filteredTags);
+        console.log('filteredRegions', filteredRegions);
 
-        if (filteredRegions.length !== 0 && filteredTags.length !== 0) {
-            return containsTags && containsRegions;
-        } else if (filteredRegions.length !== 0) {
+        const isSubset = (array1, array2) =>
+            array2.every((element) => array1.includes(element));
+
+        const containsTags = isSubset(item.tags, filteredTags);
+        const containsRegions = isSubset(item.regions, filteredRegions);
+
+        console.log('containsTags', containsTags);
+        console.log('containsRegions', containsRegions);
+
+        const hasCurrentExhibitionTag = filteredTags.includes('current');
+        const hasPastExhibitionTag = filteredTags.includes('past');
+        const hasUpcomingExhibitionTag = filteredTags.includes('upcoming');
+
+        var isCurrentExhibition = false;
+        var isPastExhibition = false;
+        var isUpcomingExhibition = false;
+
+        if (filteredTags.length !== 0 && filteredRegions.length !== 0) {
+            console.log('containsTags && containsRegions');
+            if (hasCurrentExhibitionTag) {
+                console.log('hasCurrentExhibitionTag', isCurrentExhibition);
+                isCurrentExhibition = filterCurrentExhibitions(item);
+            }
+            if (hasPastExhibitionTag) {
+                console.log('hasPastExhibitionTag', isPastExhibition);
+                isPastExhibition = filterPastExhibitions(item);
+            }
+            if (hasUpcomingExhibitionTag) {
+                console.log('hasUpcomingExhibitionTag', isUpcomingExhibition);
+                isUpcomingExhibition = filterUpcomingExhibitions(item);
+            }
+            return (isCurrentExhibition || isPastExhibition || isUpcomingExhibition || containsTags) && containsRegions;
+        } else if (filteredTags.length !== 0 && filteredRegions.length === 0) {
+            console.log('containsTags only');
+            if (hasCurrentExhibitionTag) {
+                console.log('hasCurrentExhibitionTag', isCurrentExhibition);
+                isCurrentExhibition = filterCurrentExhibitions(item);
+            }
+            if (hasPastExhibitionTag) {
+                console.log('hasPastExhibitionTag', isPastExhibition);
+                isPastExhibition = filterPastExhibitions(item);
+            }
+            if (hasUpcomingExhibitionTag) {
+                console.log('hasUpcomingExhibitionTag', isUpcomingExhibition);
+                isUpcomingExhibition = filterUpcomingExhibitions(item);
+            }
+            return (isCurrentExhibition || isPastExhibition || isUpcomingExhibition || containsTags);
+        } else if (filteredTags.length === 0 && filteredRegions.length !== 0) {
+            console.log('containsRegions only');
             return containsRegions;
-        } else if (filteredTags.length !== 0) {
-            return containsTags;
         }
     });
 
-
     function sortedAndFilteredItems(): EventItem[] {
+        console.log('filteredItems', filteredItems);
+
         if (filters.length === 0) {
             return [...EventList].sort(sortItemsByDateDesc);
         } else {
+            console.log(filters);
             return [...filteredItems].sort(sortItemsByDateDesc);
         }
     }
@@ -127,8 +192,8 @@ export default function EventCatalogue({ items }): ReactNode {
                     <div className={styles.features}>
                         {
                             sortedAndFilteredItems().map((props, idx) =>
-                                <div className={styles.featureItem}>
-                                    <Event key={idx} {...props} />
+                                <div key={idx} className={styles.featureItem}>
+                                    <Event {...props} />
                                 </div>
                             )
                         }
