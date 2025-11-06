@@ -62,12 +62,16 @@ export const EventList: EventItem[] = [
         tags: ['group']
     }, {
         title: 'Conservation',
-        description: "Solo Ceramic Exhibition by Cornelia Wessels",
+        description: (
+            <>
+                Solo Ceramic Exhibition by <Link to='docs/artists/cornelia-wessels'>Cornelia Wessels</Link>
+            </>
+        ),
         date: 'November 2, 2025 to November 24, 2025',
         openingDate: '2025-11-02',
         closingDate: '2025-11-24',
         year: '2025',
-        openingTimes: ['Tuesday to Thursday (9am - 4pm)', 'Friday to Saturday (9am - 3pm)', 'Sunday(9am - 2pm)', 'Monday(Closed)'],
+        openingTimes: ['Tuesday to Thursday (9am - 4pm)', 'Friday to Saturday (9am - 3pm)', 'Sunday (9am - 2pm)', 'Monday (Closed)'],
         imgUrl: 'jvh-gallery/tvuqezq9n8vyjuhzd5qb.png',
         link: '/docs/events/jvh-gallery/conversation-cornelia-wessels',
         regions: ['pta'],
@@ -79,10 +83,147 @@ export const EventList: EventItem[] = [
         openingDate: '2025-11-02',
         closingDate: '2025-11-24',
         year: '2025',
-        openingTimes: ['Tuesday to Thursday (9am - 4pm)', 'Friday to Saturday (9am - 3pm)', 'Sunday(9am - 2pm)', 'Monday(Closed)'],
+        openingTimes: ['Tuesday to Thursday (9am - 4pm)', 'Friday to Saturday (9am - 3pm)', 'Sunday (9am - 2pm)', 'Monday (Closed)'],
         imgUrl: 'jvh-gallery/dsbdwtv8d2g7lcme8vau.png',
         link: '/docs/events/jvh-gallery/beeste-2025',
         regions: ['pta'],
         tags: ['group']
-    },
+    }, {
+        title: 'When the Ravin Speaks',
+        description: (
+            <>
+                Solo Exhibition by <Link to='docs/artists/mariaan-kotze'>Mariaan Kotze</Link>
+            </>
+        ),
+        date: 'November 2, 2025 to November 24, 2025',
+        openingDate: '2025-11-02',
+        closingDate: '2025-11-24',
+        year: '2025',
+        openingTimes: ['Tuesday to Thursday (9am - 4pm)', 'Friday to Saturday (9am - 3pm)', 'Sunday (9am - 2pm)', 'Monday (Closed)'],
+        imgUrl: 'jvh-gallery/hzaovghpkaftdympv3hs.png',
+        link: '/docs/events/jvh-gallery/when-the-raven-speaks-mariaan-kotze',
+        regions: ['pta'],
+        tags: ['solo']
+    }, {
+        title: 'Traveling Light',
+        description: (
+            <>
+                Solo Exhibition by <Link to='docs/artists/liekie-fouche'>Liekie Fouché</Link>
+            </>
+        ),
+        date: 'November 2, 2025 to November 24, 2025',
+        openingDate: '2025-11-02',
+        closingDate: '2025-11-24',
+        year: '2025',
+        openingTimes: ['Tuesday to Thursday (9am - 4pm)', 'Friday to Saturday (9am - 3pm)', 'Sunday (9am - 2pm)', 'Monday (Closed)'],
+        imgUrl: 'jvh-gallery/emo4wfekogxa9rugtxzi.png',
+        link: '/docs/events/jvh-gallery/travelling-light-liekie-fouche',
+        regions: ['pta'],
+        tags: ['solo']
+    }, {
+        title: 'Restoration of the Image-bearer, a New Beginning',
+        description: (
+            <>
+                Solo Exhibition by <Link to='docs/artists/joy-heneke'>Joy Heyneke</Link>
+            </>
+        ),
+        date: 'November 2, 2025 to November 24, 2025',
+        openingDate: '2025-11-02',
+        closingDate: '2025-11-24',
+        year: '2025',
+        openingTimes: ['Tuesday to Thursday (9am - 4pm)', 'Friday to Saturday (9am - 3pm)', 'Sunday (9am - 2pm)', 'Monday (Closed)'],
+        imgUrl: 'jvh-gallery/yoegbpkr6yp01zvzq9or.png',
+        link: '/docs/events/jvh-gallery/restoration-of-the-image-bearer-joy-heyneke',
+        regions: ['pta'],
+        tags: ['solo']
+    }, {
+        title: 'Smokey Hounds and Inky Chicks',
+        description: (
+            <>
+                Solo Exhibition by <Link to='docs/artists/sue-clark'>Sue Clark</Link>
+            </>
+        ),
+        date: 'November 2, 2025 to November 24, 2025',
+        openingDate: '2025-11-02',
+        closingDate: '2025-11-24',
+        year: '2025',
+        openingTimes: ['Tuesday to Thursday (9am - 4pm)', 'Friday to Saturday (9am - 3pm)', 'Sunday (9am - 2pm)', 'Monday (Closed)'],
+        imgUrl: 'jvh-gallery/dgdbik83iarvmyqcqhww.png',
+        link: '/docs/events/jvh-gallery/smoky-hounds-and-inky-chicks-sue-clark',
+        regions: ['pta'],
+        tags: ['solo']
+    }, {
+        title: 'I Spy With My Little Eye',
+        description: (
+            <>
+                We are delighted to invite you to the opening of <b>"I Spy With My Little Eye"</b>, an evocative group show featuring three talented South African artists:
+                <ul>
+                    <li><Link to='docs/artists/nirupa-sing'>Nirupa Sing</Link> presenting expressive mixed- media paintings that explore symbolic depths and human connection.</li>
+                    <li><Link to='docs/artists/natasha-jacobs'>Natasha Jacobs</Link> exhibiting sensitive paintings that reflect memory, light, and the beauty in everyday moments.</li>
+                    <li><Link to='docs/artists/natasha-jacobs'>Anne Pienaar</Link > showcasing drawings and watercolours, offering delicate observations and artistic immediacy.</li>
+                </ul>
+            </>
+        ),
+        date: 'Opening on 13 November 2025 at 18h00',
+        openingDate: '2025-11-13',
+        closingDate: '2025-12-05',
+        year: '2025',
+        openingTimes: ['Mondays to Thursdays: 09h00-17h30', 'Fridays & Saturdays: 09h00-12h00', 'Closed Sundays and Public Holidays'],
+        imgUrl: 'alliance-francaise/i-spy-with-my-little-eye.png',
+        link: '/docs/events/alliance-francaise/i-spy-with-my-little-eye',
+        regions: ['pta'],
+        tags: ['group']
+    }, {
+        title: 'Alliance Française de Pretoria - Open Call 2026',
+        description: (
+            <>
+                The Alliance Française de Pretoria is pleased to invite visual artists to apply for our 2026 exhibitions. We are committed to showcasing thought-provoking, innovative, and inspiring work from both emerging and established artists. This open call welcomes all visual art mediums — including painting, sculpture, photography, digital art, illustration, installation, and mixed media.
+                <br /><br />
+                <b>Apply Online:</b> <Link href='https://pta.alliance.org.za/call-for-applications-visual-artists-for-2026-exhibitions/#/'>here</Link>
+            </>
+        ),
+        date: 'Deadline: 31 March 2026',
+        openingDate: '2025-11-04',
+        closingDate: '2026-03-31',
+        year: '2025',
+        openingTimes: ['Mondays to Thursdays: 09h00-17h30', 'Fridays & Saturdays: 09h00-12h00', 'Closed Sundays and Public Holidays'],
+        imgUrl: 'alliance-francaise/alliance-open-call-2026.png',
+        link: '/docs/events/alliance-francaise/alliance-open-call-2026',
+        regions: ['pta'],
+        tags: ['open-call']
+    }, {
+        title: 'Shadows and Mirrors',
+        description: (
+            <>
+                The Pretoria Art Museum invites you to a walkabout with <Link to='docs/artists/thomas-masingi'>Thomas Masingi</Link> and <Link to='docs/artists/neo-mlangeni'>Neo Mlangeni</Link>. An exhibition of photography, video art, digital art and mixed media drawings
+            </>
+        ),
+        date: 'Opening on Saturday 11 October 2025 at 11h00',
+        openingDate: '2025-10-11',
+        closingDate: '2026-01-18',
+        year: '2025',
+        openingTimes: ['10:00 to 17h00 on Tuesdays to Sundays', 'Closed on Mondays and Public Holidays'],
+        imgUrl: 'pretoria-art-museum/shadows-and-mirrors.png',
+        link: '/docs/events/pretoria-art-museum/shadows-and-mirrors',
+        regions: ['pta'],
+        tags: ['group']
+    }, {
+        title: 'CALL OUT: TLHAGELLA INCUBATION PROGRAMME',
+        description: (
+            <>
+                After the success of the inaugural Tlhagella Incubation Programme earlier this year, the Javett Art Centre at the University of Pretoria (Javett-UP) in partnership with the Canada Fund for Local Initiatives (CFLI) is doing it again!
+
+                The Javett-UP is calling for applications for emerging under-represented artists to participate in the second edition of Tlagella Incubation Programme. The initiative seeks to nurture and empower emerging artists, providing professional practice and entrepreneurial skills and create career opportunities through participation in an exhibition, with networking and income-generating activities.
+            </>
+        ),
+        date: 'Deadline: 6 November 2025 at 15:00',
+        openingDate: '2025-10-21',
+        closingDate: '2026-11-06',
+        year: '2025',
+        openingTimes: [],
+        imgUrl: 'javett-up/tlhagella_incubation_programme.png',
+        link: '/docs/events/javett-up/tlhagella_incubation_programme',
+        regions: ['pta'],
+        tags: ['open-call']
+    }
 ];
