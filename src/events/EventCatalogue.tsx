@@ -47,18 +47,26 @@ export default function EventCatalogue({ items }): ReactNode {
         { id: 'pta', label: 'Pretoria' },
     ];
 
-    const tags = [
+    const timelineTags = [
         { id: 'current', label: 'Current Exhibitions' },
         { id: 'past', label: 'Past Exhibitions' },
         { id: 'upcoming', label: 'Upcoming Exhibitions' },
+    ];
+
+    const categoryTags = [
         { id: 'open_calls', label: 'Open Calls' },
         { id: 'group', label: 'Group Exhibition' },
         { id: 'solo', label: 'Solo Exhibition' },
     ];
 
+    const allTags = [
+        ...timelineTags,
+        ...categoryTags,
+    ];
+
     const allFilters = [
         ...regions,
-        ...tags
+        ...allTags,
     ]
 
     function filterMatchingRegions(regionId) {
@@ -104,7 +112,7 @@ export default function EventCatalogue({ items }): ReactNode {
     };
 
     const filteredItems = EventList.filter((item) => {
-        const filteredTags = filters.filter(tag => tags.map(i => i.id).includes(tag));
+        const filteredTags = filters.filter(tag => allTags.map(i => i.id).includes(tag));
         const filteredRegions = filters.filter(region => regions.map(i => i.id).includes(region));
 
         console.log('filteredTags', filteredTags);
@@ -113,53 +121,64 @@ export default function EventCatalogue({ items }): ReactNode {
         const isSubset = (array1, array2) =>
             array2.every((element) => array1.includes(element));
 
-        const containsTags = isSubset(item.tags, filteredTags);
-        const containsRegions = isSubset(item.regions, filteredRegions);
+        const containsTags = () => {
+            var isCurrentExhibition = false;
+            var isPastExhibition = false;
+            var isUpcomingExhibition = false;
 
-        console.log('containsTags', containsTags);
-        console.log('containsRegions', containsRegions);
+            const hasCurrentExhibitionTag = filters.includes('current');
+            const hasPastExhibitionTag = filters.includes('past');
+            const hasUpcomingExhibitionTag = filters.includes('upcoming');
 
-        const hasCurrentExhibitionTag = filteredTags.includes('current');
-        const hasPastExhibitionTag = filteredTags.includes('past');
-        const hasUpcomingExhibitionTag = filteredTags.includes('upcoming');
+            if (hasCurrentExhibitionTag) {
+                console.log('hasCurrentExhibitionTag', isCurrentExhibition);
+                isCurrentExhibition = filterCurrentExhibitions(item);
+            }
+            if (hasPastExhibitionTag) {
+                console.log('hasPastExhibitionTag', isPastExhibition);
+                isPastExhibition = filterPastExhibitions(item);
+            }
+            if (hasUpcomingExhibitionTag) {
+                console.log('hasUpcomingExhibitionTag', isUpcomingExhibition);
+                isUpcomingExhibition = filterUpcomingExhibitions(item);
+            }
 
-        var isCurrentExhibition = false;
-        var isPastExhibition = false;
-        var isUpcomingExhibition = false;
+            const filteredCategoryTags = filters.filter(tag => categoryTags.map(i => i.id).includes(tag));
+            const filteredTimelineTags = filters.filter(tag => timelineTags.map(i => i.id).includes(tag));
+            const containsCategoryTags = isSubset(item.tags, filteredCategoryTags);
+
+            console.log('containsCategoryTags', containsCategoryTags);
+            console.log('filteredTimelineTags', filteredTimelineTags);
+
+            if (filteredCategoryTags.length !== 0 && filteredTimelineTags.length !== 0) {
+                return containsCategoryTags && (isCurrentExhibition || isPastExhibition || isUpcomingExhibition);
+            } else if (filteredCategoryTags.length == 0 && filteredTimelineTags.length !== 0) {
+                return (isCurrentExhibition || isPastExhibition || isUpcomingExhibition);
+            } else if (filteredTags.length !== 0 && filteredTimelineTags.length === 0) {
+                return containsCategoryTags;
+            } else {
+                return true;
+            }
+        }
+
+        const containsRegions = () => {
+            return isSubset(filteredRegions, item.regions);
+        };
+
+        console.log('containsTags', containsTags());
+        console.log('containsRegions', containsRegions());
 
         if (filteredTags.length !== 0 && filteredRegions.length !== 0) {
             console.log('containsTags && containsRegions');
-            if (hasCurrentExhibitionTag) {
-                console.log('hasCurrentExhibitionTag', isCurrentExhibition);
-                isCurrentExhibition = filterCurrentExhibitions(item);
-            }
-            if (hasPastExhibitionTag) {
-                console.log('hasPastExhibitionTag', isPastExhibition);
-                isPastExhibition = filterPastExhibitions(item);
-            }
-            if (hasUpcomingExhibitionTag) {
-                console.log('hasUpcomingExhibitionTag', isUpcomingExhibition);
-                isUpcomingExhibition = filterUpcomingExhibitions(item);
-            }
-            return (isCurrentExhibition || isPastExhibition || isUpcomingExhibition || containsTags) && containsRegions;
-        } else if (filteredTags.length !== 0 && filteredRegions.length === 0) {
-            console.log('containsTags only');
-            if (hasCurrentExhibitionTag) {
-                console.log('hasCurrentExhibitionTag', isCurrentExhibition);
-                isCurrentExhibition = filterCurrentExhibitions(item);
-            }
-            if (hasPastExhibitionTag) {
-                console.log('hasPastExhibitionTag', isPastExhibition);
-                isPastExhibition = filterPastExhibitions(item);
-            }
-            if (hasUpcomingExhibitionTag) {
-                console.log('hasUpcomingExhibitionTag', isUpcomingExhibition);
-                isUpcomingExhibition = filterUpcomingExhibitions(item);
-            }
-            return (isCurrentExhibition || isPastExhibition || isUpcomingExhibition || containsTags);
+            return containsTags() && containsRegions();
         } else if (filteredTags.length === 0 && filteredRegions.length !== 0) {
             console.log('containsRegions only');
-            return containsRegions;
+            return containsRegions();
+        } else if (filteredTags.length !== 0 && filteredRegions.length === 0) {
+            console.log('containsTags only');
+            return containsTags();
+        } else {
+            return true;
         }
     });
 
