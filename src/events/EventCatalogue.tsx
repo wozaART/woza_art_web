@@ -54,7 +54,7 @@ export default function EventCatalogue({ items }): ReactNode {
     ];
 
     const categoryTags = [
-        { id: 'open_calls', label: 'Open Calls' },
+        { id: 'open-call', label: 'Open Calls' },
         { id: 'group', label: 'Group Exhibition' },
         { id: 'solo', label: 'Solo Exhibition' },
     ];
