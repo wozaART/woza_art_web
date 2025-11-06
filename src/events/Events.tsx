@@ -1,6 +1,9 @@
+import type { ReactNode } from 'react';
+import Link from '@docusaurus/Link';
+
 export type EventItem = {
     title: string;
-    description: string;
+    description: ReactNode;
     date: string;
     openingDate: string;
     year: string;
@@ -23,7 +26,11 @@ export const EventList: EventItem[] = [
         tags: ['jhb']
     }, {
         title: 'Abstract and the Absurd 2025',
-        description: "Group Exhibition featuring Cyrille Chamayou, Andrew Mogridge, Claire Lichtenstein, David Kuijers, Jack Cohen, Jarrod Berman, SYNC, Mark Swart, Wehrner Lemmer, Andrew Jowdy Collins, Norman Catherine, Thapo Sekaoila, Helen van Stolk and Jasmine Jagger at Candice Berman Gallery, Johannesburg",
+        description: (
+            <>
+                Group Exhibition featuring <Link to='docs/artists/cyriller-chamayou'>Cyrille Chamayou</Link>, <Link to='docs/artists/andrew-mogridge'>Andrew Mogridge</Link>, <Link to='docs/artists/claire-lichtenstein'>Claire Lichtenstein</Link>, <Link to='docs/artists/david-kuijers'>David Kuijers</Link>, <Link to='docs/artists/jack-cohen'>Jack Cohen</Link>, <Link to='docs/artists/jarrod-berman'>Jarrod Berman</Link>, <Link to='docs/artists/sync'>SYNC</Link>, <Link to='docs/artists/mark-swart'>Mark Swart</Link>, <Link to='docs/artists/wehrner-lemmer'>Wehrner Lemmer</Link>, <Link to='docs/artists/andrew-jowdy-collins'>Andrew Jowdy Collins</Link>, <Link to='docs/artists/norman-catherine'>Norman Catherine</Link>, <Link to='docs/artists/thapo-sekaoila'>Thapo Sekaoila</Link>, <Link to='docs/artists/helen-van-stolk'>Helen van Stolk</Link> and <Link to='docs/artists/jasmine-jagger'>Jasmine Jagger</Link> at Candice Berman Gallery, Johannesburg
+            </>
+        ),
         date: '4 October - 7 November 2025',
         openingDate: '2025-10-04',
         year: '2025',
