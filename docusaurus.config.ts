@@ -112,7 +112,7 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        { to: '/docs/events', label: 'Events', position: 'left' },
+        { to: '/', label: 'Events', position: 'left' },
         { to: '/docs/galleries', label: 'Galleries', position: 'left' },
         { to: '/docs/artists', label: 'Artists', position: 'left' },
       ],

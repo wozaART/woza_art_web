@@ -42,9 +42,12 @@ function Event({ title, description, date, year, openingTimes, imgUrl, link }: E
 export default function EventCatalogue({ items }): ReactNode {
     const [filters, setFilters] = useState([]);
 
-    const categories = [
+    const regions = [
         { id: 'jhb', label: 'Johannesburg' },
         { id: 'pta', label: 'Pretoria' },
+    ];
+
+    const tags = [
         { id: 'current', label: 'Current Exhibitions' },
         { id: 'past', label: 'Past Exhibitions' },
         { id: 'upcoming', label: 'Upcoming Exhibitions' },
@@ -53,27 +56,53 @@ export default function EventCatalogue({ items }): ReactNode {
         { id: 'solo', label: 'Solo Exhibition' },
     ];
 
-    const handleFilterSelection = (filterId) => {
-        console.log('Filter Button Tapped')
-        console.log(filters)
-        if (filters.includes(filterId)) {
-            const newFilters = filters.filter(tag => tag !== filterId);
-            setFilters(newFilters);
+    const allFilters = [
+        ...regions,
+        ...tags
+    ]
+
+    function filterMatchingRegions(regionId) {
+        if (filters.includes(regionId)) {
+            const newFilteredRegions = filters.filter(tag => tag !== regionId);
+            setFilters(newFilteredRegions);
         } else {
-            setFilters(filters => [...filters, filterId]);
+            setFilters(regions => [...regions, regionId]);
         }
+    }
+
+    function filterMatchingTags(filterId) {
+        if (filters.includes(filterId)) {
+            const newFilteredTags = filters.filter(tag => tag !== filterId);
+            setFilters(newFilteredTags);
+        } else {
+            setFilters(tags => [...tags, filterId]);
+        }
+    }
+
+    const handleFilterSelection = (filterId) => {
+        filterMatchingRegions(filterId);
+        filterMatchingTags(filterId);
     };
 
-    const filteredItems = EventList.filter(function (item) {
-        const filteredTags = item.tags.filter(tag => filters.includes(tag));
-        if (filteredTags.length === 0) {
-            return false;
+    const filteredItems = EventList.filter((item) => {
+        const filteredTags = filters.filter(tag => tags.map(i => i.id).includes(tag));
+        const filteredRegions = filters.filter(region => regions.map(i => i.id).includes(region));
+
+        const containsTags = filteredTags.every(tag => item.tags.includes(tag));
+        const containsRegions = filteredRegions.every(region => item.regions.includes(region));
+
+        if (filteredRegions.length !== 0 && filteredTags.length !== 0) {
+            return containsTags && containsRegions;
+        } else if (filteredRegions.length !== 0) {
+            return containsRegions;
+        } else if (filteredTags.length !== 0) {
+            return containsTags;
         }
-        return true;
     });
 
+
     function sortedAndFilteredItems(): EventItem[] {
-        if (filteredItems.length === 0) {
+        if (filters.length === 0) {
             return [...EventList].sort(sortItemsByDateDesc);
         } else {
             return [...filteredItems].sort(sortItemsByDateDesc);
@@ -90,7 +119,7 @@ export default function EventCatalogue({ items }): ReactNode {
         <div>
             <section className="padding-bottom--lg">
                 <div className="container">
-                    <FilterButtons filters={categories} currentFilters={filters} onFilterClick={handleFilterSelection} />
+                    <FilterButtons filters={allFilters} currentFilters={filters} onFilterClick={handleFilterSelection} />
                 </div>
             </section>
             <section>
