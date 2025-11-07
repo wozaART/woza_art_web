@@ -280,7 +280,7 @@ export default function EventCatalogue({ items }): ReactNode {
     function sortItemsByDateDesc(a, b) {
         const _a = new Date(a.openingDate)
         const _b = new Date(b.openingDate)
-        return _a.getTime() - _b.getTime();
+        return _b.getTime() - _a.getTime();
     }
 
     return (

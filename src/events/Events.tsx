@@ -208,6 +208,22 @@ export const EventList: EventItem[] = [
         regions: ['pta'],
         tags: ['group']
     }, {
+        title: `The Green Tailor's Birthday Picnic at PAM`,
+        description: (
+            <>
+                <Link href='https://thegreentailor.com'>The Green Tailor</Link> celebrates 11 years in business 🪡💃🔥 please join us for a picnic at the Pretoria Art Museum (cnr Francis Bard / Wessel Street, Pretoria). Everyone is welcome to come and enjoy the best art in the city.
+            </>
+        ),
+        date: '15 November 2025, 10h00 - 14h00',
+        openingDate: '2025-11-15',
+        closingDate: '2025-11-15',
+        year: '2025',
+        openingTimes: ['10:00 to 17h00 on Tuesdays to Sundays', 'Closed on Mondays and Public Holidays'],
+        imgUrl: 'pretoria-art-museum/the-green-tailor-turns-11.jpeg',
+        link: '/docs/events/pretoria-art-museum/the-green-tailor-turns-11',
+        regions: ['pta'],
+        tags: ['group']
+    }, {
         title: 'CALL OUT: TLHAGELLA INCUBATION PROGRAMME',
         description: (
             <>
