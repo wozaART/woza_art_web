@@ -5,6 +5,7 @@ import IdealImage from '@theme/IdealImage';
 import styles from './styles.module.css';
 import { EventItem, EventList } from './Events';
 import FilterButtons from './FilterButtons';
+import OpeningTimes from './OpeningTimes';
 
 function Event({ title, description, date, year, openingTimes, imgUrl, link }: EventItem) {
     return (
@@ -14,17 +15,7 @@ function Event({ title, description, date, year, openingTimes, imgUrl, link }: E
                     <h3>{title}</h3>
                     <small className='padding-bottom--xs'>{description}</small>
                     <small className='padding-bottom-xs'><b>Date:</b> {date}</small>
-                    <small className='padding-bottom-xs'> <b>Opening Times:</b>
-                    </small>
-                    <ul>
-                        {
-                            openingTimes.map((time) => (
-                                <li>
-                                    <small>{time}<br /></small>
-                                </li>
-                            ))
-                        }
-                    </ul>
+                    <OpeningTimes openingTimes={openingTimes}></OpeningTimes>
                     <a href={link}>
                         <small>More info...</small>
                     </a>

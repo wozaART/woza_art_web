@@ -241,5 +241,21 @@ export const EventList: EventItem[] = [
         link: '/docs/events/trent-gallery/multi-vision-ryan-loubser',
         regions: ['pta'],
         tags: ['solo']
+    }, {
+        title: 'Moon - Open Call',
+        description: (
+            <>
+                An open call for a group exhibition at Trent Gallery
+            </>
+        ),
+        date: 'Deadline: 15 December 2025',
+        openingDate: '2026-01-23',
+        closingDate: '2025-12-15',
+        year: '2025',
+        openingTimes: [],
+        imgUrl: 'trent-gallery/moon-open-call.jpeg',
+        link: '/docs/events/trent-gallery/moon-open-call',
+        regions: ['pta'],
+        tags: ['open-call']
     }
 ];
