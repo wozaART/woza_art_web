@@ -234,7 +234,7 @@ export const EventList: EventItem[] = [
         ),
         date: 'Deadline: 6 November 2025 at 15:00',
         openingDate: '2025-10-21',
-        closingDate: '2026-11-06',
+        closingDate: '2025-11-06',
         year: '2025',
         openingTimes: [],
         imgUrl: 'javett-up/tlhagella-incubation-programme.png',
@@ -273,5 +273,21 @@ export const EventList: EventItem[] = [
         link: '/docs/events/trent-gallery/moon-open-call',
         regions: ['pta'],
         tags: ['open-call']
+    }, {
+        title: 'Nature Intended',
+        description: (
+            <>
+                The exhibition, titled Nature Intended, is a collaborative presentation by artists <Link to='docs/artists/loeritha-saayman'>Loeritha Saayman</Link> and <Link to='docs/artists/linda-raath'>Linda Raath</Link>. This showcase features a thoughtful combination of two-dimensional artworks and ceramic pieces, highlighting the unique artistic visions of both creators.
+            </>
+        ),
+        date: 'Deadline: 15 December 2025',
+        openingDate: '2026-01-23',
+        closingDate: '2025-12-15',
+        year: '2025',
+        openingTimes: ['Tuesdays to Fridays: 09:00 to 17:00', 'Saturdays: 09:00 to 13:00', 'Sundays, Mondays and Public Holidays: Closed'],
+        imgUrl: 'pretoria-arts-association/nature-intended.jpg',
+        link: '/docs/events/pretoria-arts-association/nature-intended',
+        regions: ['pta'],
+        tags: ['group']
     }
 ];
