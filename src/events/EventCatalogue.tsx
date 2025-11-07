@@ -59,6 +59,13 @@ export default function EventCatalogue({ items }): ReactNode {
         { id: 'solo', label: 'Solo Exhibition' },
     ];
 
+    const weeklyTags = [
+        { id: 'opening-this-week', label: 'Opening this week' },
+        { id: 'opening-next-week', label: 'Opening next week' },
+        { id: 'closing-this-week', label: 'Closing this week' },
+        { id: 'closing-next-week', label: 'Closing next week' },
+    ];
+
     const allTags = [
         ...timelineTags,
         ...categoryTags,
@@ -104,6 +111,59 @@ export default function EventCatalogue({ items }): ReactNode {
         const currentDate = new Date();
         const openingDate = new Date(item.openingDate);
         return openingDate > currentDate;
+    }
+
+    function getCurrentSundayEndDate(): Date {
+        const today = new Date();
+        // 0 for Sunday, 1 for Monday, etc.
+        const currentDay = today.getDay();
+
+        const sundayEndDate = new Date(today);
+
+        if (currentDay !== 0) {
+            // If today is not Sunday, add the remaining days to reach Sunday
+            sundayEndDate.setDate(today.getDate() + (7 - currentDay));
+        } else {
+            // If today is Sunday, sundayEndDate already represents the current Sunday
+            // To get the *end* of the day, you might want to set the time to 23:59:59.999
+            sundayEndDate.setHours(23, 59, 59, 999);
+        }
+        return sundayEndDate;
+    }
+
+    function getNextWeekSundayEndDate(): Date {
+        const nextWeekSundayEndDate = new Date();
+        const currentSundayEndDate = getCurrentSundayEndDate();
+        nextWeekSundayEndDate.setDate(currentSundayEndDate.getDate() + 7);
+        return nextWeekSundayEndDate;
+    }
+
+    function filterThisWeeksOpeningExhibitions(item: EventItem): boolean {
+        const today = new Date();
+        const sundayEndDate = getCurrentSundayEndDate();
+        const openingDate = new Date(item.openingDate);
+        return openingDate > today && openingDate < sundayEndDate;
+    }
+
+    function filterThisWeeksClosingExhibitions(item: EventItem): boolean {
+        const today = new Date();
+        const sundayEndDate = getCurrentSundayEndDate();
+        const closingDate = new Date(item.closingDate);
+        return closingDate > today && closingDate < sundayEndDate;
+    }
+
+    function filterNextWeeksOpeningExhibitions(item: EventItem): boolean {
+        const sundayEndDate = getCurrentSundayEndDate();
+        const nextWeekSundayEndDate = getNextWeekSundayEndDate();
+        const openingDate = new Date(item.openingDate);
+        return openingDate > sundayEndDate && openingDate < nextWeekSundayEndDate;
+    }
+
+    function filterNextWeeksClosingExhibitions(item: EventItem): boolean {
+        const sundayEndDate = getCurrentSundayEndDate();
+        const nextWeekSundayEndDate = getNextWeekSundayEndDate();
+        const closingDate = new Date(item.closingDate);
+        return closingDate > sundayEndDate && closingDate < nextWeekSundayEndDate;
     }
 
     const handleFilterSelection = (filterId) => {
@@ -182,14 +242,47 @@ export default function EventCatalogue({ items }): ReactNode {
         }
     });
 
+    function weeklyFilteredItems(items: EventItem[]): EventItem[] {
+        const hasOpeningThisWeekTag = filters.includes('opening-this-week');
+        const hasOpeningNextWeekTag = filters.includes('opening-next-week');
+        const hasClosingThisWeekTag = filters.includes('closing-this-week');
+        const hasClosingNextWeekTag = filters.includes('closing-next-week');
+
+        if (hasOpeningThisWeekTag) {
+            console.log('hasOpeningThisWeekTag', hasOpeningThisWeekTag);
+            return items.filter(item => filterThisWeeksOpeningExhibitions(item));
+        }
+
+        if (hasOpeningNextWeekTag) {
+            console.log('hasOpeningNextWeekTag', hasOpeningNextWeekTag);
+            return items.filter(item => filterNextWeeksOpeningExhibitions(item));
+        }
+
+        if (hasClosingThisWeekTag) {
+            console.log('hasClosingThisWeekTag', hasClosingThisWeekTag);
+            return items.filter(item => filterThisWeeksClosingExhibitions(item));
+        }
+
+        if (hasClosingNextWeekTag) {
+            console.log('hasClosingNextWeekTag', hasClosingNextWeekTag);
+            return items.filter(item => filterNextWeeksClosingExhibitions(item));
+        }
+
+        return items;
+    }
+
     function sortedAndFilteredItems(): EventItem[] {
         console.log('filteredItems', filteredItems);
+
+        const updatedFilteredItems = weeklyFilteredItems(filteredItems);
+
+        console.log('updatedFilteredItems', updatedFilteredItems);
 
         if (filters.length === 0) {
             return [...EventList].sort(sortItemsByDateDesc);
         } else {
             console.log(filters);
-            return [...filteredItems].sort(sortItemsByDateDesc);
+            return [...updatedFilteredItems].sort(sortItemsByDateDesc);
         }
     }
 
@@ -203,7 +296,10 @@ export default function EventCatalogue({ items }): ReactNode {
         <div>
             <section className="padding-bottom--lg">
                 <div className="container">
-                    <FilterButtons filters={allFilters} currentFilters={filters} onFilterClick={handleFilterSelection} />
+                    <div className="padding-bottom--md">
+                        <FilterButtons filters={allFilters} currentFilters={filters} onFilterClick={handleFilterSelection} />
+                    </div>
+                    <FilterButtons filters={weeklyTags} currentFilters={filters} onFilterClick={handleFilterSelection} />
                 </div>
             </section>
             <section>

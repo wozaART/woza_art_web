@@ -1,26 +1,8 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import './FilterButtons.css';
 
 const FilterButtons = ({ filters, currentFilters, onFilterClick }) => {
     const scrollContainerRef = useRef(null);
-
-    const scrollLeft = () => {
-        if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollBy({
-                left: -150,
-                behavior: 'smooth',
-            });
-        }
-    };
-
-    const scrollRight = () => {
-        if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollBy({
-                left: 150,
-                behavior: 'smooth',
-            });
-        }
-    };
 
     const buttonFilterStyle = (filterId) => {
         if (currentFilters.includes(filterId)) {
@@ -30,10 +12,8 @@ const FilterButtons = ({ filters, currentFilters, onFilterClick }) => {
         }
     };
 
-
     return (
         <div className="filter-buttons-wrapper">
-            <button className="scroll-arrow left" onClick={scrollLeft}><b>&lt;</b></button>
             <div className="filter-buttons-container" ref={scrollContainerRef}>
                 {filters.map((filter) => (
                     <button
@@ -45,7 +25,6 @@ const FilterButtons = ({ filters, currentFilters, onFilterClick }) => {
                     </button>
                 ))}
             </div>
-            <button className="scroll-arrow right" onClick={scrollRight}><b>&gt;</b></button>
         </div>
     );
 };
