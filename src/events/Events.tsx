@@ -280,13 +280,29 @@ export const EventList: EventItem[] = [
                 The exhibition, titled Nature Intended, is a collaborative presentation by artists <Link to='docs/artists/loeritha-saayman'>Loeritha Saayman</Link> and <Link to='docs/artists/linda-raath'>Linda Raath</Link>. This showcase features a thoughtful combination of two-dimensional artworks and ceramic pieces, highlighting the unique artistic visions of both creators.
             </>
         ),
-        date: 'Deadline: 15 December 2025',
-        openingDate: '2026-01-23',
-        closingDate: '2025-12-15',
+        date: '4 October - 22 October 2025',
+        openingDate: '2025-10-04',
+        closingDate: '2025-10-22',
         year: '2025',
         openingTimes: ['Tuesdays to Fridays: 09:00 to 17:00', 'Saturdays: 09:00 to 13:00', 'Sundays, Mondays and Public Holidays: Closed'],
         imgUrl: 'pretoria-arts-association/nature-intended.jpg',
         link: '/docs/events/pretoria-arts-association/nature-intended',
+        regions: ['pta'],
+        tags: ['group']
+    }, {
+        title: 'Mini Masters - 2025',
+        description: (
+            <>
+                An intimate showcase called Mini Masters at the Association of Arts Pretoria will be opened by <Link to='docs/artists/kevin-collins'>Kevin Collins</Link>, Chairperson of Ceramics Southern Africa, on Saturday 1 November 2025 at 11:00. The exhibition will be open to the public until 22 November.
+            </>
+        ),
+        date: '1 November - 22 November 2025',
+        openingDate: '2025-11-01',
+        closingDate: '2025-11-22',
+        year: '2025',
+        openingTimes: ['Tuesdays to Fridays: 09:00 to 17:00', 'Saturdays: 09:00 to 13:00', 'Sundays, Mondays and Public Holidays: Closed'],
+        imgUrl: 'pretoria-arts-association/mini-masters-2025.jpg',
+        link: '/docs/events/pretoria-arts-association/mini-masters-2025',
         regions: ['pta'],
         tags: ['group']
     }
