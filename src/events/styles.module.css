@@ -46,7 +46,6 @@
     .imageContainer {
         padding: 15px;
         align-self: center;
-        height: 250px;
         min-width: 200px;
         max-width: 360px;
         object-fit: cover;
