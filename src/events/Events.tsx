@@ -220,7 +220,7 @@ export const EventList: EventItem[] = [
         year: '2025',
         openingTimes: ['10:00 to 17h00 on Tuesdays to Sundays', 'Closed on Mondays and Public Holidays'],
         imgUrl: 'pretoria-art-museum/the-green-tailor-turns-11.jpeg',
-        link: '/docs/events/pretoria-art-museum/the-green-tailor-turns-11',
+        link: '/docs/events/pretoria-art-museum/the-green-tailor-2025',
         regions: ['pta'],
         tags: ['group']
     }, {
@@ -257,22 +257,6 @@ export const EventList: EventItem[] = [
         link: '/docs/events/trent-gallery/multi-vision-ryan-loubser',
         regions: ['pta'],
         tags: ['solo']
-    }, {
-        title: 'Moon - Open Call',
-        description: (
-            <>
-                An open call for a group exhibition at Trent Gallery
-            </>
-        ),
-        date: 'Deadline: 15 December 2025',
-        openingDate: '2026-01-23',
-        closingDate: '2025-12-15',
-        year: '2025',
-        openingTimes: [],
-        imgUrl: 'trent-gallery/moon-open-call.jpeg',
-        link: '/docs/events/trent-gallery/moon-open-call',
-        regions: ['pta'],
-        tags: ['open-call']
     }, {
         title: 'Nature Intended',
         description: (
