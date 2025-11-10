@@ -17,7 +17,7 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           Woza ART
         </Heading>
-        <p className="hero__subtitle">The very best of art events within reach!</p>
+        <p className="hero__subtitle">The very best art events within reach!</p>
         <div className="container">
           <div className={styles.buttonFlex}>
             <div>
@@ -39,7 +39,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="The very best of art events within reach!">
+      description="The very best art events within reach!">
       <HomepageHeader />
       <main>
         <EventCatalogue />
