@@ -17,7 +17,6 @@ const sidebars: SidebarsConfig = {
     'galleries',
     'artists',
     'subscribe',
-    'members',
   ],
 };
 
