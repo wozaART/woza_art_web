@@ -32,7 +32,7 @@ export const EventList: EventItem[] = [
         title: 'Abstract and the Absurd 2025',
         description: (
             <>
-                Group Exhibition featuring <Link to='docs/artists/cyriller-chamayou'>Cyrille Chamayou</Link>, <Link to='docs/artists/andrew-mogridge'>Andrew Mogridge</Link>, <Link to='docs/artists/claire-lichtenstein'>Claire Lichtenstein</Link>, <Link to='docs/artists/david-kuijers'>David Kuijers</Link>, <Link to='docs/artists/jack-cohen'>Jack Cohen</Link>, <Link to='docs/artists/jarrod-berman'>Jarrod Berman</Link>, <Link to='docs/artists/sync'>SYNC</Link>, <Link to='docs/artists/mark-swart'>Mark Swart</Link>, <Link to='docs/artists/wehrner-lemmer'>Wehrner Lemmer</Link>, <Link to='docs/artists/andrew-jowdy-collins'>Andrew Jowdy Collins</Link>, <Link to='docs/artists/norman-catherine'>Norman Catherine</Link>, <Link to='docs/artists/thapo-sekaoila'>Thapo Sekaoila</Link>, <Link to='docs/artists/helen-van-stolk'>Helen van Stolk</Link> and <Link to='docs/artists/jasmine-jagger'>Jasmine Jagger</Link> at Candice Berman Gallery, Johannesburg
+                Group Exhibition featuring <b>Cyrille Chamayou</b>, <b>Andrew Mogridge</b>, <b>Claire Lichtenstein</b>, <b>David Kuijers</b>, <b>Jack Cohen</b>, <b>Jarrod Berman</b>, <b>SYNC</b>, <b>Mark Swart</b>, <b>Wehrner Lemmer</b>, <b>Andrew Jowdy Collins</b>, <b>Norman Catherine</b>, <b>Thapo Sekaoila</b>, <b>Helen van Stolk</b> and <b>Jasmine Jagger</b> at Candice Berman Gallery, Johannesburg
             </>
         ),
         date: '4 October - 7 November 2025',
@@ -48,7 +48,7 @@ export const EventList: EventItem[] = [
         title: 'A Christmas exhibition',
         description: (
             <>
-                Group Exhibition by <Link to='docs/artists/bronwen-schalkwyk'>Bronwen Schalkwyk</Link>, <Link to='docs/artists/elisca-du-toit'>Elisca du Toit</Link>, <Link to='docs/artists/kobus-walker'>Kobus Walker</Link>, <Link to='docs/artists/koos-bronkhorst'>Koos Bronkhorst</Link>, <Link to='docs/artists/lize-kampman'>Lize Kampman</Link>, <Link to='docs/artists/magdel-van-rooyen'>Magdel van Rooyen</Link>, and more …
+                Group Exhibition by <b>Bronwen Schalkwyk</b>, <b>Elisca du Toit</b>, <b>Kobus Walker</b>, <b>Koos Bronkhorst</b>, <b>Lize Kampman</b>, <b>Magdel van Rooyen</b>, and more …
             </>
         ),
         date: 'Sunday 9 November 2025 at 11h30 – 14h00 and will conclude on Saturday 13 December 2025',
@@ -64,7 +64,7 @@ export const EventList: EventItem[] = [
         title: 'Conservation',
         description: (
             <>
-                Solo Ceramic Exhibition by <Link to='docs/artists/cornelia-wessels'>Cornelia Wessels</Link>
+                Solo Ceramic Exhibition by <b>Cornelia Wessels</b>
             </>
         ),
         date: 'November 2, 2025 to November 24, 2025',
@@ -92,7 +92,7 @@ export const EventList: EventItem[] = [
         title: 'When the Ravin Speaks',
         description: (
             <>
-                Solo Exhibition by <Link to='docs/artists/mariaan-kotze'>Mariaan Kotze</Link>
+                Solo Exhibition by <b>Mariaan Kotze</b>
             </>
         ),
         date: 'November 2, 2025 to November 24, 2025',
@@ -108,7 +108,7 @@ export const EventList: EventItem[] = [
         title: 'Traveling Light',
         description: (
             <>
-                Solo Exhibition by <Link to='docs/artists/liekie-fouche'>Liekie Fouché</Link>
+                Solo Exhibition by <b>Liekie Fouché</b>
             </>
         ),
         date: 'November 2, 2025 to November 24, 2025',
@@ -124,7 +124,7 @@ export const EventList: EventItem[] = [
         title: 'Restoration of the Image-bearer, a New Beginning',
         description: (
             <>
-                Solo Exhibition by <Link to='docs/artists/joy-heneke'>Joy Heyneke</Link>
+                Solo Exhibition by <b>Joy Heyneke</b>
             </>
         ),
         date: 'November 2, 2025 to November 24, 2025',
@@ -140,7 +140,7 @@ export const EventList: EventItem[] = [
         title: 'Smokey Hounds and Inky Chicks',
         description: (
             <>
-                Solo Exhibition by <Link to='docs/artists/sue-clark'>Sue Clark</Link>
+                Solo Exhibition by <b>Sue Clark</b>
             </>
         ),
         date: 'November 2, 2025 to November 24, 2025',
@@ -158,9 +158,9 @@ export const EventList: EventItem[] = [
             <>
                 We are delighted to invite you to the opening of <b>"I Spy With My Little Eye"</b>, an evocative group show featuring three talented South African artists:
                 <ul>
-                    <li><Link to='docs/artists/nirupa-sing'>Nirupa Sing</Link> presenting expressive mixed- media paintings that explore symbolic depths and human connection.</li>
-                    <li><Link to='docs/artists/natasha-jacobs'>Natasha Jacobs</Link> exhibiting sensitive paintings that reflect memory, light, and the beauty in everyday moments.</li>
-                    <li><Link to='docs/artists/natasha-jacobs'>Anne Pienaar</Link > showcasing drawings and watercolours, offering delicate observations and artistic immediacy.</li>
+                    <li><b>Nirupa Sing</b> presenting expressive mixed- media paintings that explore symbolic depths and human connection.</li>
+                    <li><b>Natasha Jacobs</b> exhibiting sensitive paintings that reflect memory, light, and the beauty in everyday moments.</li>
+                    <li><b>Anne Pienaar</b> showcasing drawings and watercolours, offering delicate observations and artistic immediacy.</li>
                 </ul>
             </>
         ),
@@ -195,7 +195,7 @@ export const EventList: EventItem[] = [
         title: 'Shadows and Mirrors',
         description: (
             <>
-                The Pretoria Art Museum invites you to a walkabout with <Link to='docs/artists/thomas-masingi'>Thomas Masingi</Link> and <Link to='docs/artists/neo-mlangeni'>Neo Mlangeni</Link>. An exhibition of photography, video art, digital art and mixed media drawings
+                The Pretoria Art Museum invites you to a walkabout with <b>Thomas Masingi</b> and <b>Neo Mlangeni</b>. An exhibition of photography, video art, digital art and mixed media drawings
             </>
         ),
         date: 'Opening on Saturday 11 October 2025 at 11h00',
@@ -258,26 +258,10 @@ export const EventList: EventItem[] = [
         regions: ['pta'],
         tags: ['solo']
     }, {
-        title: 'Nature Intended',
-        description: (
-            <>
-                The exhibition, titled Nature Intended, is a collaborative presentation by artists <Link to='docs/artists/loeritha-saayman'>Loeritha Saayman</Link> and <Link to='docs/artists/linda-raath'>Linda Raath</Link>. This showcase features a thoughtful combination of two-dimensional artworks and ceramic pieces, highlighting the unique artistic visions of both creators.
-            </>
-        ),
-        date: '4 October - 22 October 2025',
-        openingDate: '2025-10-04',
-        closingDate: '2025-10-22',
-        year: '2025',
-        openingTimes: ['Tuesdays to Fridays: 09:00 to 17:00', 'Saturdays: 09:00 to 13:00', 'Sundays, Mondays and Public Holidays: Closed'],
-        imgUrl: 'pretoria-arts-association/nature-intended.jpg',
-        link: '/docs/events/pretoria-arts-association/nature-intended',
-        regions: ['pta'],
-        tags: ['group']
-    }, {
         title: 'Mini Masters - 2025',
         description: (
             <>
-                An intimate showcase called Mini Masters at the Association of Arts Pretoria will be opened by <Link to='docs/artists/kevin-collins'>Kevin Collins</Link>, Chairperson of Ceramics Southern Africa, on Saturday 1 November 2025 at 11:00. The exhibition will be open to the public until 22 November.
+                An intimate showcase called Mini Masters at the Association of Arts Pretoria will be opened by <b>Kevin Collins</b>, Chairperson of Ceramics Southern Africa, on Saturday 1 November 2025 at 11:00. The exhibition will be open to the public until 22 November.
             </>
         ),
         date: '1 November - 22 November 2025',

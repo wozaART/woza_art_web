@@ -115,18 +115,19 @@ const config: Config = {
         { to: '/', label: 'Events', position: 'left' },
         { to: '/docs/galleries', label: 'Galleries', position: 'left' },
         { to: '/docs/artists', label: 'Artists', position: 'left' },
+        { href: 'https://camerondebruyn.art', label: 'Previous Website', position: 'right' },
       ],
     },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Subscribe',
           items: [
             {
-              label: 'Journey',
-              to: '/docs/intro',
-            },
+              label: 'Events',
+              to: '/docs/subscribe',
+            }
           ],
         },
         {
@@ -143,11 +144,11 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: 'Previous Website',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: `Cameron de Bruyn's Art`,
+              href: 'https://camerondebruyn.art',
             },
           ],
         },
