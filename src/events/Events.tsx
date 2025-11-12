@@ -17,6 +17,22 @@ export type EventItem = {
 
 export const EventList: EventItem[] = [
     {
+        title: 'Multi Vision',
+        description: (
+            <>
+                Works by artist Ryan Loubser at Trent Gallery.
+            </>
+        ),
+        date: '31 October - 14 November 2025',
+        openingDate: '2025-10-31',
+        closingDate: '2025-11-14',
+        year: '2025',
+        openingTimes: ['Mondays to Fridays: 08:00 to 04:30', 'Saturdays: 08:30 to 12:30', 'Sundays: Closed'],
+        imgUrl: 'trent-gallery/multi-vision-ryan-loubser.png',
+        link: '/docs/events/trent-gallery/multi-vision-ryan-loubser',
+        regions: ['pta'],
+        tags: ['solo']
+    }, {
         title: 'USM: Colour, Form, and Function in Dialogue',
         description: "Group show with USM Modular Furniture at Candice Berman Gallery",
         date: '25 September - 5 November 2025',
