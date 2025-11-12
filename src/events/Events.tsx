@@ -17,12 +17,20 @@ export type EventItem = {
 
 export const EventList: EventItem[] = [
     {
+        title: 'Light in the darkness',
+        description: 'A solo exhibition by Irene',
+        date: '13 November at 6pm - 21 November 2025',
+        openingDate: '2025-11-13',
+        closingDate: '2025-11-21',
+        year: '2025',
+        openingTimes: ['Mondays to Fridays: 08:00 to 16:00', 'Saturdays: 09:00 to 13:00', 'Sundays: Closed', 'Public Holidays: 09:00 to 13:00'],
+        imgUrl: 'the-showroom-art-gallery/irene-light-in-the-darkness.jpg',
+        link: '/docs/events/the-showroom-art-gallery/irene-light-in-the-darkness',
+        regions: ['pta'],
+        tags: ['solo']
+    }, {
         title: 'Multi Vision',
-        description: (
-            <>
-                Works by artist Ryan Loubser at Trent Gallery.
-            </>
-        ),
+        description: 'Works by artist Ryan Loubser at Trent Gallery.',
         date: '31 October - 14 November 2025',
         openingDate: '2025-10-31',
         closingDate: '2025-11-14',
