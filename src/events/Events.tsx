@@ -266,22 +266,6 @@ export const EventList: EventItem[] = [
         regions: ['pta'],
         tags: ['open-call']
     }, {
-        title: 'Multi Vision',
-        description: (
-            <>
-                An exhibition by Ryan Loubser
-            </>
-        ),
-        date: '31 October 2025 until 14 November 2025',
-        openingDate: '2025-10-31',
-        closingDate: '2026-11-14',
-        year: '2025',
-        openingTimes: [],
-        imgUrl: 'trent-gallery/multi-vision-ryan-loubser.png',
-        link: '/docs/events/trent-gallery/multi-vision-ryan-loubser',
-        regions: ['pta'],
-        tags: ['solo']
-    }, {
         title: 'Mini Masters - 2025',
         description: (
             <>
