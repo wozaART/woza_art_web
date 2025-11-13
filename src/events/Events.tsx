@@ -17,6 +17,42 @@ export type EventItem = {
 
 export const EventList: EventItem[] = [
     {
+        title: 'Divergence',
+        description: "Divergence brings together the different voices of third-year art students, each exploring their own path through glass, ceramics, sculpture, drawing, painting etc. While the works differ in medium, style, and approach, they come together in their shared commitment for experimentation and reflection and the title speaks to the individuality of each artist’s vision.",
+        date: '25 October - 31 January 2026',
+        openingDate: '2025-10-25',
+        closingDate: '2026-01-31',
+        year: '2025',
+        openingTimes: ['Tuesdays, Thursdays and Fridays: 10:00 to 15:00', 'Saturdays: 09:00 to 14:00', 'Mondays, Wednesdays and Sundays: Closed'],
+        imgUrl: 'the-viewing-room-st-lorient/divergence.png',
+        link: '/docs/events/the-viewing-room-st-lorient/divergence',
+        regions: ['pta'],
+        tags: ['group']
+    }, {
+        title: 'Scapes',
+        description: 'This exhibition explores the traditional idea of "scapes" in art, from landscape and seascapes to a more modern interpretation of "scapes". Artists were asked to research and use any word containing scape in them, as inspiration or to create a new and imagined scape.',
+        date: '25 October - 31 January 2026',
+        openingDate: '2025-10-25',
+        closingDate: '2026-01-31',
+        year: '2025',
+        openingTimes: ['Tuesdays, Thursdays and Fridays: 10:00 to 15:00', 'Saturdays: 09:00 to 14:00', 'Mondays, Wednesdays and Sundays: Closed'],
+        imgUrl: 'the-viewing-room-st-lorient/scapes.png',
+        link: '/docs/events/the-viewing-room-st-lorient/scapes',
+        regions: ['pta'],
+        tags: ['group']
+    }, {
+        title: 'Speaking Art, Not English',
+        description: 'A solo exhibition by Craig Muller at The Viewing Room Art Gallery',
+        date: '8 November - 31 December 2025',
+        openingDate: '2025-11-08',
+        closingDate: '2025-12-31',
+        year: '2025',
+        openingTimes: ['Tuesdays, Thursdays and Fridays: 10:00 to 15:00', 'Saturdays: 09:00 to 14:00', 'Mondays, Wednesdays and Sundays: Closed'],
+        imgUrl: 'the-viewing-room-st-lorient/speaking-art-not-english-craig-muller.png',
+        link: '/docs/events/the-viewing-room-st-lorient/speaking-art-not-english',
+        regions: ['pta'],
+        tags: ['solo']
+    }, {
         title: 'Light in the darkness',
         description: 'A solo exhibition by Irene',
         date: '13 November at 6pm - 21 November 2025',
