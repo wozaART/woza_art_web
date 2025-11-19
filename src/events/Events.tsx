@@ -17,6 +17,18 @@ export type EventItem = {
 
 export const EventList: EventItem[] = [
     {
+        title: 'Official Opening: Hannatjie Visser Art Gallery',
+        description: "Come and enjoy a lovely afternoon with us, listening to Prof. Alex Duffey at 3pm unpacking Hannetjie Visser's art journey from an art historian’s point of view. Save the date and please RSVP. We are looking forward to seeing you there.",
+        date: '22 November 2025, 2 - 5 PM',
+        openingDate: '2025-11-22',
+        closingDate: '2025-11-22',
+        year: '2025',
+        openingTimes: [],
+        imgUrl: 'pretoria-other/hannetjie-visser-art-gallery-opening.jpg',
+        link: '/docs/events/pretoria-other/hannetjie-visser-art-gallery-opening',
+        regions: ['pta'],
+        tags: ['solo', 'gallery-opening']
+    }, {
         title: 'Jacquey Theron Art Studio - Opening Night',
         description: "Join us for an intimate exhibition featuring works by Hettie Solms, Jacquey Theron, Jeanne-Marie van der Schyf, Marie Conradie, Celine Lefort, Estelle Erasmus, Andre Blignaut and Ida Els.",
         date: '19 November 2025',
