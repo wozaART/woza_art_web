@@ -17,11 +17,23 @@ export type EventItem = {
 
 export const EventList: EventItem[] = [
     {
+        title: 'Jacquey Theron Art Studio - Opening Night',
+        description: "Join us for an intimate exhibition featuring works by Hettie Solms, Jacquey Theron, Jeanne-Marie van der Schyf, Marie Conradie, Celine Lefort, Estelle Erasmus, Andre Blignaut and Ida Els.",
+        date: '19 November 2025',
+        openingDate: '2025-11-19',
+        closingDate: '2025-11-19',
+        year: '2025',
+        openingTimes: [],
+        imgUrl: 'pretoria-other/jacquey-theron-art-studio.jpeg',
+        link: '/docs/events/pretoria-other/jacquey-theron-art-studio',
+        regions: ['pta'],
+        tags: ['group']
+    }, {
         title: 'Vern Fables - Comic Book Launch',
         description: "Comic book art exhibition of WB Pretorius at Trent Gallery",
         date: '21 November - 28 November 2025',
         openingDate: '2025-11-21',
-        closingDate: '2026-11-28',
+        closingDate: '2025-11-28',
         year: '2025',
         openingTimes: [],
         imgUrl: 'trent-gallery/vern-fables-1.jpeg',
@@ -33,7 +45,7 @@ export const EventList: EventItem[] = [
         description: "Explore the creativity, innovation, and hard work of our design students - a showcase of their final projects and the future of design",
         date: '21 November 2025 (17h30)',
         openingDate: '2025-11-21',
-        closingDate: '2026-11-21',
+        closingDate: '2025-11-21',
         year: '2025',
         openingTimes: [],
         imgUrl: 'inscape/student-exhibition-pta-2025.jpeg',

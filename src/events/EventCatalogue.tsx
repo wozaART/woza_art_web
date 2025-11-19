@@ -122,6 +122,13 @@ export default function EventCatalogue({ items }): ReactNode {
         return sundayEndDate;
     }
 
+    function getPreviousWeekSundayDate(): Date {
+        const previousWeekSundayEndDate = new Date();
+        const currentSundayEndDate = getCurrentSundayEndDate();
+        previousWeekSundayEndDate.setDate(currentSundayEndDate.getDate() - 7);
+        return previousWeekSundayEndDate;
+    }
+
     function getNextWeekSundayEndDate(): Date {
         const nextWeekSundayEndDate = new Date();
         const currentSundayEndDate = getCurrentSundayEndDate();
@@ -130,17 +137,17 @@ export default function EventCatalogue({ items }): ReactNode {
     }
 
     function filterThisWeeksOpeningExhibitions(item: EventItem): boolean {
-        const today = new Date();
+        const previousSundayDate = getPreviousWeekSundayDate();
         const sundayEndDate = getCurrentSundayEndDate();
         const openingDate = new Date(item.openingDate);
-        return openingDate > today && openingDate < sundayEndDate;
+        return openingDate > previousSundayDate && openingDate < sundayEndDate;
     }
 
     function filterThisWeeksClosingExhibitions(item: EventItem): boolean {
-        const today = new Date();
+        const previousSundayDate = getPreviousWeekSundayDate();
         const sundayEndDate = getCurrentSundayEndDate();
         const closingDate = new Date(item.closingDate);
-        return closingDate > today && closingDate < sundayEndDate;
+        return closingDate > previousSundayDate && closingDate < sundayEndDate;
     }
 
     function filterNextWeeksOpeningExhibitions(item: EventItem): boolean {
