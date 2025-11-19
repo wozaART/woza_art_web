@@ -17,6 +17,18 @@ export type EventItem = {
 
 export const EventList: EventItem[] = [
     {
+        title: 'Azibuyele Emasisweni',
+        description: "The South African Gallery of Legends, in proud partnership with Ditsong Museums of South Africa, invites you to experience a landmark cultural event. An award-winning exhibition by legendary artist Prof. Pitika Ntuli, featuring 45 evocative bone sculptures that speak to African spirituality, ancestry, and healing.",
+        date: '1 November 2025 - 30 April 2026',
+        openingDate: '2025-11-01',
+        closingDate: '2026-04-30',
+        year: '2025',
+        openingTimes: [],
+        imgUrl: 'ditsong-museums/azibuyele-emasisweni.jpeg',
+        link: '/docs/events/ditsong-museums/azibuyele-emasisweni',
+        regions: ['pta'],
+        tags: ['museum']
+    }, {
         title: 'Official Opening: Hannatjie Visser Art Gallery',
         description: "Come and enjoy a lovely afternoon with us, listening to Prof. Alex Duffey at 3pm unpacking Hannetjie Visser's art journey from an art historian’s point of view. Save the date and please RSVP. We are looking forward to seeing you there.",
         date: '22 November 2025, 2 - 5 PM',
