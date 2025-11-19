@@ -17,6 +17,18 @@ export type EventItem = {
 
 export const EventList: EventItem[] = [
     {
+        title: 'Vern Fables - Comic Book Launch',
+        description: "Comic book art exhibition of WB Pretorius at Trent Gallery",
+        date: '21 November - 28 November 2025',
+        openingDate: '2025-11-21',
+        closingDate: '2026-11-28',
+        year: '2025',
+        openingTimes: [],
+        imgUrl: 'trent-gallery/vern-fables-1.jpeg',
+        link: '/docs/events/trent-gallery/vern-fables',
+        regions: ['pta'],
+        tags: ['solo']
+    }, {
         title: 'Inscape Student Exhibition',
         description: "Explore the creativity, innovation, and hard work of our design students - a showcase of their final projects and the future of design",
         date: '21 November 2025 (17h30)',
