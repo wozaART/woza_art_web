@@ -17,6 +17,18 @@ export type EventItem = {
 
 export const EventList: EventItem[] = [
     {
+        title: 'Inscape Student Exhibition',
+        description: "Explore the creativity, innovation, and hard work of our design students - a showcase of their final projects and the future of design",
+        date: '21 November 2025 (17h30)',
+        openingDate: '2025-11-21',
+        closingDate: '2026-11-21',
+        year: '2025',
+        openingTimes: [],
+        imgUrl: 'inscape/student-exhibition-pta-2025.jpeg',
+        link: '/docs/events/inscape/student-exhibition-pta-2025',
+        regions: ['pta'],
+        tags: ['group']
+    }, {
         title: 'Divergence',
         description: "Divergence brings together the different voices of third-year art students, each exploring their own path through glass, ceramics, sculpture, drawing, painting etc. While the works differ in medium, style, and approach, they come together in their shared commitment for experimentation and reflection and the title speaks to the individuality of each artist’s vision.",
         date: '25 October - 31 January 2026',
