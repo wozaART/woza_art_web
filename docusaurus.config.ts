@@ -139,7 +139,11 @@ const config: Config = {
             {
               label: 'Events',
               to: '/docs/subscribe',
-            }
+            },
+            {
+              label: 'Support Us',
+              href: 'https://buymeacoffee.com/woza.art',
+},
           ],
         },
         {
