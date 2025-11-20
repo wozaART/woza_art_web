@@ -17,6 +17,18 @@ export type EventItem = {
 
 export const EventList: EventItem[] = [
     {
+        title: "13th epicARTS Christmas Exhibition '25 with Almero",
+        description: "It's an honour to invite you to our 13th epicARTS Christmas Exhibition '25! Dian Louw will showcase his work alongside 20 other super talented Gauteng-based artists!",
+        date: '6 December 2025 - 16 December 2025',
+        openingDate: '2025-12-06',
+        closingDate: '2025-12-16',
+        year: '2025',
+        openingTimes: [],
+        imgUrl: 'pretoria-other/epic-arts-pta-1.png',
+        link: '/docs/events/pretoria-other/epic-arts-13-pta',
+        regions: ['pta'],
+        tags: ['group']
+    }, {
         title: 'Azibuyele Emasisweni',
         description: "The South African Gallery of Legends, in proud partnership with Ditsong Museums of South Africa, invites you to experience a landmark cultural event. An award-winning exhibition by legendary artist Prof. Pitika Ntuli, featuring 45 evocative bone sculptures that speak to African spirituality, ancestry, and healing.",
         date: '1 November 2025 - 30 April 2026',
